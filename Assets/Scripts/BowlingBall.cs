@@ -2,7 +2,7 @@
 
 public class BowlingBall : MonoBehaviour {
 
-    public float Speed;
+    public Vector3 Velocity;
 
     private Rigidbody _rigidBody;
     private AudioSource _audioSource;
@@ -17,7 +17,7 @@ public class BowlingBall : MonoBehaviour {
 
     public void Launch()
     {
-        _rigidBody.velocity = new Vector3(0.0f, 0.0f, Speed);
+        _rigidBody.velocity = Velocity;
         _audioSource.Play();
     }
 
